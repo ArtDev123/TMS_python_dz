@@ -24,7 +24,7 @@ def time_of_function(func: Callable) -> Callable:
     return wrapper
 
 @time_of_function
-def func_one():
+def func_one() -> None:
     my_list = [ i for i in range (1, 10000)]
 
 @time_of_function    
