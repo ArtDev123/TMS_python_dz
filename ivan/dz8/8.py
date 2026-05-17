@@ -58,7 +58,6 @@ def calculator() -> None:
                 print(operation_name)
 
             print(f"{num1} {operation} {num2} = {result}")
-            
 
         except ValueError as e:
             print(f"\n ОШИБКА ВВОДА: {e}")
