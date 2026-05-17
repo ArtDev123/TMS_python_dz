@@ -4,3 +4,7 @@ def print_hello() -> None:
 
 def print_hello_2() -> None:
     print("hello_2")
+
+
+def print_hello_3() -> None:
+    print("hello_3")
