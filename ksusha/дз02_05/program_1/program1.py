@@ -8,19 +8,19 @@ print(f"Имя ос: {os_name} или {sys_name}")
 print(f"Вы находитесь  в папке: {now_folder}")
 
 expansions = []
-conter_new = {}
+conter_new: dict[str, int] = {}
 
-items = os.path.join(now_folder, "дз12_05", "program_1")
+items = os.path.join(now_folder, "ksusha" ,"дз02_05", "program_1")
 files_items = os.listdir(items)
 
 for item in files_items:
     expansion = "." + item.split(".")[-1]
     expansions.append(expansion)
 
-expansions = set(expansions)
-print(expansions)
+expansions_set = set(expansions)
+print(expansions_set)
 
-for item in expansions:
+for item in expansions_set:
     if not os.path.exists(os.path.join(items, item)):
         os.makedirs(os.path.join(items, item))
 
@@ -34,12 +34,11 @@ for item in files_items:
     name, ext = os.path.splitext(item)
     if not ext:
         continue
-    name, ext = os.path.splitext(item)
     os.replace(os.path.join(items, item), os.path.join(items, ext, item))
     conter_new[ext] = conter_new.get(ext, 0) + 1
 
 
-for item in expansions:
+for item in expansions_set:
     new_path = os.path.join(items, item)
     count = 0
     for n in os.listdir(new_path):

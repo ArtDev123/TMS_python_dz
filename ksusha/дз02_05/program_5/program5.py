@@ -1,7 +1,7 @@
 import os
 
 now_file = os.getcwd()
-fil = os.path.join(now_file, "дз02_05", "program_5", "children")
+fil = os.path.join(now_file,"ksusha" , "дз02_05", "program_5", "children")
 with open(fil, "r", encoding="utf-8") as f:
     text = f.readlines()
 

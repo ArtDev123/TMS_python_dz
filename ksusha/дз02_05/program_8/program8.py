@@ -4,11 +4,11 @@ import csv
 
 
 now_folder = os.getcwd()
-json_path = os.path.join(now_folder, "дз02_05", "program_8", "employees.json")
-csv_path = os.path.join(now_folder, "дз02_05", "program_8", "res.csv")
+json_path = os.path.join(now_folder,"ksusha" , "дз02_05", "program_8", "employees.json")
+csv_path = os.path.join(now_folder,"ksusha" , "дз02_05", "program_8", "res.csv")
 
 
-def transformation(json_path, csv_path):
+def transformation(json_path: str, csv_path: str) -> None:
     with open(json_path, "r", encoding="utf-8") as empl:
         data = json.load(empl)
         with open(csv_path, "w+", encoding="utf-8") as res:
@@ -19,7 +19,7 @@ def transformation(json_path, csv_path):
                 file_writer.writerow(item.values())
 
 
-def new_json(json_path):
+def new_json(json_path: str) -> None:
     with open(json_path, "r", encoding="utf-8") as empl:
         data = json.load(empl)
         headers = data[0].keys()
@@ -44,13 +44,16 @@ def new_json(json_path):
         json.dump(data, empl, indent=4)
 
 
-def new_csv(csv_path) -> None:
+def new_csv(csv_path: str) -> None:
     with open(csv_path, "r", encoding="utf-8") as empl:
         reader = csv.DictReader(empl, delimiter=",")
         headers = reader.fieldnames
+        if headers is None:
+            print("CSV файл не содержит заголовков")
+            return
     with open(csv_path, "a", encoding="utf-8", newline="") as empl:
         writer = csv.DictWriter(empl, fieldnames=headers, delimiter=",")
-        data = {}
+        data: dict[str | list[str]] = {}
         for i in headers:
             if i == "languages":
                 n = int(input("Введите количество языков"))
@@ -64,7 +67,7 @@ def new_csv(csv_path) -> None:
         writer.writerow(data)
 
 
-def json_to_csv(json_path, csv_path):
+def json_to_csv(json_path: str, csv_path: str) -> None:  
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -75,7 +78,7 @@ def json_to_csv(json_path, csv_path):
             writer.writerow(item.values())
 
 
-def information(json_path):
+def information(json_path: str) -> None:
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     emploer = input("Введите имя сотрудника: ")
@@ -88,7 +91,7 @@ def information(json_path):
         print(f"Сотрудник с именем {emploer} не найден")
 
 
-def language_from_user(json_path):
+def language_from_user(json_path: str) -> None:
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     language = input("Введите язык для фильтрации: ")
@@ -101,7 +104,7 @@ def language_from_user(json_path):
         print(f"Нет сотрудников, знающих язык {language}")
 
 
-def middle_height(json_path):
+def middle_height(json_path: str) -> None:
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     year = input("Введите год рождения: ")
