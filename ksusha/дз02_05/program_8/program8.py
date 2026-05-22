@@ -38,7 +38,7 @@ def new_json(json_path: str) -> None:
                     languages.append(language)
                 new_person[item] = languages
             else:
-                if item != "languages": 
+                if item != "languages":
                     new_person[item] = input(f"Введите {item}: ")
         data.append(new_person)
     with open(json_path, "w", encoding="utf-8") as empl:
