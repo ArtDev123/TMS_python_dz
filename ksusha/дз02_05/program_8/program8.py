@@ -24,7 +24,7 @@ def new_json(json_path: str) -> None:
         data = json.load(empl)
         headers = data[0].keys()
     with open(json_path, "a", encoding="utf-8") as empl:
-        new_person = {}
+        new_person: dict[str, str | list[str]] = {}
         for item in headers:
             if item == "languages":
                 try:
@@ -54,7 +54,7 @@ def new_csv(csv_path: str) -> None:
             return
     with open(csv_path, "a", encoding="utf-8", newline="") as empl:
         writer = csv.DictWriter(empl, fieldnames=headers, delimiter=",")
-        data = {}
+        data: dict[str, str] = {}
         for i in headers:
             if i == "languages":
                 n = int(input("Введите количество языков"))
