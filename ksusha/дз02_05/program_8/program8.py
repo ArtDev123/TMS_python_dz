@@ -62,7 +62,7 @@ def new_csv(csv_path: str) -> None:
                 for k in range(n):
                     language = input("Введите язык программирования: ")
                     languages.append(language)
-                data[i] = languages
+                data[i] = ", ".join(languages)
             else:
                 data[i] = input(f"Введите {i}")
         writer.writerow(data)
