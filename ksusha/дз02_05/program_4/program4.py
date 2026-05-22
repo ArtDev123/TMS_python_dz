@@ -2,8 +2,8 @@ import os
 import re
 
 now_folder = os.getcwd()
-stop_file = os.path.join(now_folder,"ksusha" ,"дз02_05", "program_4", "stop_words.txt")
-text_file = os.path.join(now_folder,"ksusha" , "дз02_05", "program_4", "text_for_program4.txt")
+stop_file = os.path.join(now_folder, "ksusha", "дз02_05", "program_4", "stop_words.txt")
+text_file = os.path.join(now_folder, "ksusha", "дз02_05", "program_4", "text_for_program4.txt")
 
 with open(stop_file, "r", encoding="utf-8") as stop:
     stop_words = stop.read()
@@ -15,7 +15,7 @@ with open(text_file, "r", encoding="utf-8") as text:
     print(file_text)
 
 with open(
-    os.path.join(now_folder,"ksusha" , "дз02_05", "program_4", "result.txt"),
+    os.path.join(now_folder, "ksusha", "дз02_05", "program_4", "result.txt"),
     "w+",
     encoding="utf-8",
 ) as res:

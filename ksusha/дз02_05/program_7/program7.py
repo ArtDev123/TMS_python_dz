@@ -1,7 +1,7 @@
 import os
 
 now_folder = os.getcwd()
-text_path = os.path.join(now_folder,"ksusha"  "дз02_05", "program_7", "text.txt")
+text_path = os.path.join(now_folder, "ksusha", "дз02_05", "program_7", "text.txt")
 with open(text_path, "r", encoding="utf-8") as f:
     text = f.readlines()
 

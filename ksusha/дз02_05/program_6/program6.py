@@ -2,7 +2,7 @@ import os
 import re
 
 now_folder = os.getcwd()
-text_path = os.path.join(now_folder,"ksusha" , "дз02_05", "program_6", "text_for_program6.txt")
+text_path = os.path.join(now_folder, "ksusha", "дз02_05", "program_6", "text_for_program6.txt")
 with open(text_path, "r", encoding="utf-8") as f:
     text = f.read()
 

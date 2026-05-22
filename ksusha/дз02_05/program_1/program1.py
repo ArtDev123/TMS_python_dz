@@ -10,7 +10,7 @@ print(f"Вы находитесь  в папке: {now_folder}")
 expansions = []
 conter_new: dict[str, int] = {}
 
-items = os.path.join(now_folder, "ksusha" ,"дз02_05", "program_1")
+items = os.path.join(now_folder, "ksusha","дз02_05", "program_1")
 files_items = os.listdir(items)
 
 for item in files_items:

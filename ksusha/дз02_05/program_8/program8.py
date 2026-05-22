@@ -4,8 +4,8 @@ import csv
 
 
 now_folder = os.getcwd()
-json_path = os.path.join(now_folder,"ksusha" , "дз02_05", "program_8", "employees.json")
-csv_path = os.path.join(now_folder,"ksusha" , "дз02_05", "program_8", "res.csv")
+json_path = os.path.join(now_folder, "ksusha", "дз02_05", "program_8", "employees.json")
+csv_path = os.path.join(now_folder, "ksusha", "дз02_05", "program_8", "res.csv")
 
 
 def transformation(json_path: str, csv_path: str) -> None:
@@ -67,7 +67,7 @@ def new_csv(csv_path: str) -> None:
         writer.writerow(data)
 
 
-def json_to_csv(json_path: str, csv_path: str) -> None:  
+def json_to_csv(json_path: str, csv_path: str) -> None:
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
