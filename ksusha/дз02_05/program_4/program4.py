@@ -7,8 +7,8 @@ text_file = os.path.join(now_folder, "ksusha", "дз02_05", "program_4", "text_f
 
 with open(stop_file, "r", encoding="utf-8") as stop:
     stop_words = stop.read()
-    stop_words = stop_words.split()
-    print(stop_words)
+    stop_words_ff = stop_words.split()
+    print(stop_words_ff)
 
 with open(text_file, "r", encoding="utf-8") as text:
     file_text = text.read()

@@ -38,7 +38,8 @@ def new_json(json_path: str) -> None:
                     languages.append(language)
                 new_person[item] = languages
             else:
-                new_person[item] = input(f"Введите {item}: ")
+                if item != "languages": 
+                    new_person[item] = input(f"Введите {item}: ")
         data.append(new_person)
     with open(json_path, "w", encoding="utf-8") as empl:
         json.dump(data, empl, indent=4)
@@ -53,7 +54,7 @@ def new_csv(csv_path: str) -> None:
             return
     with open(csv_path, "a", encoding="utf-8", newline="") as empl:
         writer = csv.DictWriter(empl, fieldnames=headers, delimiter=",")
-        data: dict[str | list[str]] = {}
+        data = {}
         for i in headers:
             if i == "languages":
                 n = int(input("Введите количество языков"))
