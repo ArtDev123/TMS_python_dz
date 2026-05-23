@@ -1,6 +1,5 @@
 import os
 import shutil
-from typing import Dict, List
 
 
 def get_os_name() -> str:
@@ -13,13 +12,13 @@ def get_current_path() -> str:
 
 def group_files_by_extension() -> None:
     current_dir: str = os.getcwd()
-    files: List[str] = [
+    files: list[str] = [
         f
         for f in os.listdir(current_dir)
         if os.path.isfile(os.path.join(current_dir, f))
     ]
 
-    extension_dirs: Dict[str, List[str]] = {}
+    extension_dirs: dict[str, list[str]] = {}
     total_files_moved: int = 0
     total_size_bytes: int = 0
 
