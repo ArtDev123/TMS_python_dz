@@ -1,3 +1,5 @@
+from collections.abc import Callable
+
 from homeWorks.task_08_json_csv.methods_to_use.search_employees import find_employee_by_name
 from homeWorks.task_08_json_csv.methods_to_use.work_with_files import update_json_to_csv
 from homeWorks.task_08_json_csv.methods_to_use.filters import (
@@ -23,7 +25,7 @@ MENU_TEXT = """
 
 
 def run_menu(json_path: str, csv_path: str) -> None:
-    actions = {
+    actions: dict[str, Callable[[], None]] = {
         '1': lambda: update_json_to_csv(json_path, csv_path),
         '2': lambda: add_employee_to_json(json_path),
         '3': lambda: add_employee_to_csv(csv_path),

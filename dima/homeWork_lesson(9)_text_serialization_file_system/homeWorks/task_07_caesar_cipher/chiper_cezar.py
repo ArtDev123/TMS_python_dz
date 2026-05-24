@@ -40,7 +40,7 @@ def cezar_cipher(text: str, shift: int, mode: Mode, language: Language) -> str:
             index = alphabet.find(lower_char)
             new_index = (index + actual_shift) % n
             new_char = alphabet[new_index]
-            result.append(new_char.upper() if is_upper else  new_char)
+            result.append(new_char.upper() if is_upper else new_char)
         else:
             result.append(char)
 

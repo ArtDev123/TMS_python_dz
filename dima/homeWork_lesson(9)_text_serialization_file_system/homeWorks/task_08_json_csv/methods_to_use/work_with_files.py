@@ -1,18 +1,26 @@
 import csv
 import json
 import os
+from typing import Any
 
 import pandas as pd
 
 
-def save_employee_to_json(new_employee: dict, json_path: str) -> None:
+def save_employee_to_json(new_employee: dict[str, Any],
+                          json_path: str) -> None:
+
+    data: list[dict[str, object]] = []
+
     if os.path.exists(json_path) and os.path.getsize(json_path) > 0:
         with open(json_path, 'r', encoding='utf-8') as f:
 
             try:
-                data = json.load(f)
-                if not isinstance(data, list):
-                    data = [data]
+                loaded_data = json.load(f)
+
+                if isinstance(loaded_data, list):
+                    data = loaded_data
+                else:
+                    data.append(loaded_data)
 
             except json.JSONDecodeError:
                 data = []
@@ -25,7 +33,7 @@ def save_employee_to_json(new_employee: dict, json_path: str) -> None:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
-def save_employee_to_csv(new_employee: dict, csv_path: str) -> None:
+def save_employee_to_csv(new_employee: dict[str, Any], csv_path: str) -> None:
     file_exists = os.path.exists(csv_path)
     file_is_empty = not file_exists or os.path.getsize(csv_path) == 0
 

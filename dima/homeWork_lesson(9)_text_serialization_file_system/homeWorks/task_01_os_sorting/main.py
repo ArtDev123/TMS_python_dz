@@ -16,7 +16,7 @@ print(f"Current folder is: {current_folder}")
 source_path = os.path.join(current_folder, 'source_files')
 sorted_files = os.path.join(current_folder, 'sorted_files')
 
-stats: dict = {}
+stats: dict[str, dict[str, int]] = {}
 
 for file_name in os.listdir(source_path):
     old_files_path = os.path.join(source_path, file_name)

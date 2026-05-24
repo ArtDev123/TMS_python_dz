@@ -1,17 +1,21 @@
 import json
 
+from typing import cast
+
 
 def filter_by_language(json_path: str) -> None:
     with open(json_path, 'r', encoding='utf-8') as json_file:
-        employees = json.load(json_file)
+        employees: list[dict[str, object]] = json.load(json_file)
 
     search_user_by_lang = input("Введите язык программирования: ").strip().lower()
 
-    filtered_employees: list = []
+    filtered_employees: list[dict[str, object]] = []
 
     for employee in employees:
 
-        employee_langs = [lang.lower() for lang in employee["languages"]]
+        employee_languages = cast(list[str], employee["languages"])
+
+        employee_langs = [lang.lower() for lang in employee_languages]
 
         if search_user_by_lang in employee_langs:
 
@@ -25,7 +29,7 @@ def filter_by_language(json_path: str) -> None:
 
         for employee in filtered_employees:
 
-            languages = ", ".join(employee["languages"])
+            languages = ", ".join(cast(list[str], employee["languages"]))
 
             print(f"{employee['name']} - {languages}")
 
@@ -41,7 +45,7 @@ def average_height_by_year(json_path: str) -> None:
         except ValueError:
             print("Ошибка: Неверно введены значения!")
 
-    heights: list = []
+    heights: list[int] = []
 
     for employee in employees:
 

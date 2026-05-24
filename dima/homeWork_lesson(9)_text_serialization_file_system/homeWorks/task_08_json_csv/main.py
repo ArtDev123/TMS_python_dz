@@ -9,7 +9,7 @@ employees_json_path = os.path.join(data_directory, 'employees.json')
 employees_csv_path = os.path.join(data_directory, 'employees.csv')
 
 
-def main():
+def main() -> None:
     run_menu(employees_json_path, employees_csv_path)
 
 

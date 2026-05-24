@@ -8,7 +8,7 @@ from homeWorks.task_08_json_csv.methods_to_use.validators import (
 )
 
 
-def get_employee_data() -> dict | None:
+def get_employee_data() -> dict[str, object] | None:
     print("Для отмены добавления введите 0.")
 
     name = get_validated_full_name("Введите Имя и Фамилию: ")
@@ -63,7 +63,7 @@ def get_employee_data() -> dict | None:
 
     languages = [lang.strip() for lang in langs_input.split(",") if lang.strip()]
 
-    new_employees: dict = {
+    new_employees: dict[str, object] = {
         "name": name,
         "birthday": birthday,
         "height": height,
