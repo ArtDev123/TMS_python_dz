@@ -1,18 +1,18 @@
 class Math:
     @staticmethod
-    def addition(a, b):
+    def addition(a: int | float, b: int | float) -> None:
         print(a + b)
 
     @staticmethod
-    def subtraction(a, b):
+    def subtraction(a: int | float, b: int | float) -> None:
         print(a - b)
 
     @staticmethod
-    def multiplication(a, b):
+    def multiplication(a: int | float, b: int | float) -> None:
         print(a * b)
 
     @staticmethod
-    def division(a, b):
+    def division(a: int | float, b: int | float) -> None:
         try:
             print(a / b)
         except ZeroDivisionError:

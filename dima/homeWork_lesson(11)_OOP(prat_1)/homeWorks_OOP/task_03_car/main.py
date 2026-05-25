@@ -1,24 +1,27 @@
 class Car:
-    def __init__(self, car_color, car_type, car_year):
+    def __init__(self,
+                 car_color: str,
+                 car_type: str,
+                 car_year: int):
         self.car_color = car_color
         self.car_type = car_type
         self.car_year = car_year
 
     @staticmethod
-    def start_auto():
+    def start_auto() -> None:
         print("Автомобиль заведён")
 
     @staticmethod
-    def stop_auto():
+    def stop_auto() -> None:
         print("Автомобиль заглушен")
 
-    def set_auto_year(self, car_year):
+    def set_auto_year(self, car_year: int) -> None:
         self.car_year = car_year
 
-    def set_auto_type(self, car_type):
+    def set_auto_type(self, car_type: str) -> None:
         self.car_type = car_type
 
-    def set_auto_color(self, car_color):
+    def set_auto_color(self, car_color: str) -> None:
         self.car_color = car_color
 
 

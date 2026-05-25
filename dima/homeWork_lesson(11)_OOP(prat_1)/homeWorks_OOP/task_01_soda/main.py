@@ -1,9 +1,8 @@
 class Soda:
-    def __init__(self, taste=None):
+    def __init__(self, taste: str | None = None) -> None:
         self.taste = taste
 
-
-    def __str__(self):
+    def __str__(self) -> str:
         if self.taste:
             return f'У вас газировка с {self.taste} вкусом'
         return "У вас обычная газировка"
