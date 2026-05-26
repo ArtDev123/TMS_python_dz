@@ -11,7 +11,7 @@ def caesar_cipher(text: str, shift: int) -> str:
     return result
 
 
-filename = "input.txt"
+filename = "Input.txt"
 
 with open(filename, "r", encoding="utf-8") as f:
     lines = f.readlines()

@@ -164,7 +164,7 @@ def main() -> None:
     try:
         load_json(filename_json)
     except FileNotFoundError:
-        print("Создаем новый JSON-файл с исходными данными.")
+        print("Создаём новый JSON-файл с исходными данными.")
         data = [
             {
                 "name": "John Smith",
@@ -192,6 +192,16 @@ def main() -> None:
             },
         ]
         save_json(data, filename_json)
+    except ValueError as ve:
+        print(f"Ошибка структуры JSON: {ve}")
+        print("Исправьте employees.json и перезапустите программу.")
+        return
+    except json.JSONDecodeError as je:
+        print(f"Ошибка разбора JSON: {je}")
+        print(
+            "Файл повреждён или невалиден. Исправьте employees.json и перезапустите программу."
+        )
+        return
 
     while True:
         print("\nМеню:")
@@ -211,7 +221,7 @@ def main() -> None:
         elif choice == "2":
             add_employee_to_json(filename_json)
         elif choice == "3":
-            add_employee_to_csv(filename_csv)  # <--- Исправлено
+            add_employee_to_csv(filename_csv)
         elif choice == "4":
             find_employee_by_name(filename_json)
         elif choice == "5":
