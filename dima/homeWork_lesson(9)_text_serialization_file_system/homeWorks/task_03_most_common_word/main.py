@@ -12,7 +12,7 @@ with (open(input_file_path, "r", encoding='utf-8') as read_file,
 
     for line in read_file:
 
-        words = line.strip().split()
+        words = line.lower().strip().split()
         word_count: dict[str, int] = {}
 
         for w in words:

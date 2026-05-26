@@ -20,9 +20,7 @@ class Math:
 
 
 if __name__ == "__main__":
-    math_obj = Math()
-
-    math_obj.addition(4, 5)
-    math_obj.subtraction(4, 5)
-    math_obj.multiplication(4, 5)
-    math_obj.division(4, 5)
+    Math.addition(4, 5)
+    Math.subtraction(4, 5)
+    Math.multiplication(4, 5)
+    Math.division(4, 5)

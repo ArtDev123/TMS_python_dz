@@ -8,11 +8,15 @@ with open(students_file_path, 'r', encoding='utf-8') as file:
     for line in file:
         students = line.split()
 
-        if not students:
+        if len(students) != 3:
             continue
 
         student_surname, student_name, student_marks = students
-        grade = int(student_marks)
+
+        try:
+            grade = int(student_marks)
+        except ValueError:
+            continue
 
         if grade < 3:
             print(f"{student_surname} {student_name} - '{student_marks}'")

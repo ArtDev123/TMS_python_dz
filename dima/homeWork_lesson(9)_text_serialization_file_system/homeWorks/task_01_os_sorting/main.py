@@ -1,6 +1,8 @@
 import os
 import platform
 
+from suport_func.format_for_size import format_size
+
 
 # ==== Вывести имя вашей os ====
 os_name = platform.system()
@@ -49,8 +51,10 @@ for file_name in os.listdir(source_path):
 
 # ==== Сообщение после рассортировки ====
 for extension_folder_name, info in stats.items():
+    readable_size = format_size(info['size'])
+
     print(f"Moved {info['count']} to folders: {extension_folder_name}, "
-          f"total size of this files is: {info['size']}")
+          f"total size of this files is: {readable_size}")
 
 
 # ==== Переименование файла ====

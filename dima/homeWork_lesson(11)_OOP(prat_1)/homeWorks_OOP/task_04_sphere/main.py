@@ -3,10 +3,10 @@ from math import pi
 
 class Sphere:
     def __init__(self,
-                 radius: int = 1,
-                 x: int = 0,
-                 y: int = 0,
-                 z: int = 0):
+                 radius: int | float = 1,
+                 x: int | float = 0,
+                 y: int | float = 0,
+                 z: int | float = 0):
         self.radius = radius
         self.x = x
         self.y = y
@@ -18,10 +18,10 @@ class Sphere:
     def get_square(self) -> float:
         return 4 * pi * self.radius ** 2
 
-    def get_radius(self) -> int:
+    def get_radius(self) -> int | float:
         return self.radius
 
-    def get_center(self) -> tuple[int, int, int]:
+    def get_center(self) -> tuple[int | float, int | float, int | float]:
         return self.x, self.y, self.z
 
     def set_radius(self, radius: int) -> None:

@@ -15,11 +15,10 @@ with open(stop_words_path, "r", encoding="utf-8") as file:
 with open(text_file_path, "r", encoding="utf-8") as file:
     text = file.read()
 
-for word in stop_words:
-    pattern = re.compile(re.escape(word), re.IGNORECASE)
-    text = pattern.sub("*" * len(word), text)
+pattern = re.compile("|".join(map(re.escape, stop_words)), re.IGNORECASE)
+result = pattern.sub(lambda match: "*" * len(match.group()), text)
 
 with open(result_path, "w", encoding="utf-8") as file:
-    file.write(text)
+    file.write(result)
 
-print(text)
+print(result)

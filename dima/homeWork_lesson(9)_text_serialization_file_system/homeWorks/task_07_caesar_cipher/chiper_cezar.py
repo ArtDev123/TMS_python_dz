@@ -17,7 +17,7 @@ def cezar_cipher(text: str, shift: int, mode: Mode, language: Language) -> str:
     if language == Language.EN:
         alphabet = string.ascii_lowercase
     elif language == Language.RU:
-        alphabet = "abcdefghijklmnopqrstuvwxyz"
+        alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
     else:
         raise ValueError(f"{language} is not supported")
 

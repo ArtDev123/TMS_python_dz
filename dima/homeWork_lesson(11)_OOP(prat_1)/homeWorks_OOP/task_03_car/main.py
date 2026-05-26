@@ -1,11 +1,11 @@
 class Car:
     def __init__(self,
-                 car_color: str,
-                 car_type: str,
-                 car_year: int):
-        self.car_color = car_color
-        self.car_type = car_type
-        self.car_year = car_year
+                 car: str,
+                 type: str,
+                 year: int):
+        self.car = car
+        self.type = type
+        self.year = year
 
     @staticmethod
     def start_auto() -> None:
@@ -16,13 +16,13 @@ class Car:
         print("Автомобиль заглушен")
 
     def set_auto_year(self, car_year: int) -> None:
-        self.car_year = car_year
+        self.year = car_year
 
     def set_auto_type(self, car_type: str) -> None:
-        self.car_type = car_type
+        self.type = car_type
 
     def set_auto_color(self, car_color: str) -> None:
-        self.car_color = car_color
+        self.car = car_color
 
 
 if __name__ == "__main__":
@@ -35,6 +35,6 @@ if __name__ == "__main__":
     car.set_auto_type("купе")
     car.set_auto_year(2023)
 
-    print(f"Ваша машина цвета {car.car_color.title()}"
-          f" в кузове {car.car_type.title()}"
-          f" сделана в {car.car_year}г.")
+    print(f"Ваша машина цвета {car.car.title()}"
+          f" в кузове {car.type.title()}"
+          f" сделана в {car.year}г.")

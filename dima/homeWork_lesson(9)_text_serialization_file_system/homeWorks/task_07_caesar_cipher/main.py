@@ -15,18 +15,19 @@ encrypted_file_path = os.path.join(current_directory, "encrypted.txt")
 with open(input_file_path, "r", encoding='utf-8') as read_file:
     lines = read_file.readlines()
 
-
 encrypted_lines = []
 
 for line_number, line in enumerate(lines, start=1):
+    clean_line = line.rstrip("\n")
+
     encrypted_line = cezar_cipher(
-        text=line,
+        text=clean_line,
         shift=line_number,
         mode=Mode.ENCRYPT,
         language=Language.EN
     )
 
-    encrypted_lines.append(encrypted_line)
+    encrypted_lines.append(encrypted_line + "\n")
 
 with open(encrypted_file_path, "w", encoding='utf-8') as write_file:
     write_file.writelines(encrypted_lines)
