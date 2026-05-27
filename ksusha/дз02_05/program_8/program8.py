@@ -68,17 +68,6 @@ def new_csv(csv_path: str) -> None:
         writer.writerow(data)
 
 
-def json_to_csv(json_path: str, csv_path: str) -> None:
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    with open(csv_path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(data[0].keys())
-        for item in data:
-            writer.writerow(item.values())
-
-
 def information(json_path: str) -> None:
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
@@ -131,8 +120,8 @@ def middle_height(json_path: str) -> None:
 
 while True:
     print(
-        "\nМеню\n1. Считать данные из исходного JSON-файла и преобразовать их в формат CSV\n"
-        "2. Сохранить данные в CSV-файл\n3. Добавить информацию о новом сотруднике в JSON-файл\n"
+        "\nМеню\n1. Считать данные из исходного JSON-файла и преобразовать их в формат CSV"
+        "\n3. Добавить информацию о новом сотруднике в JSON-файл\n"
         "4. Добавить информацию о новом сотруднике в CSV-файл\n5. Вывести информацию об "
         "одном сотруднике по имени\n"
         "6. Вывести список всех сотрудников, кто владеет заданным языком программирования"
@@ -145,8 +134,8 @@ while True:
     )
     choice = input("Введите номер того, что хотите сделать: ")
 
-    if choice not in ["1", "2", "3", "4", "5", "6", "7", "8"]:
-        print("Неверный ввод, введите число от 1 до 8")
+    if choice not in ["1", "2", "3", "4", "5", "6", "7"]:
+        print("Неверный ввод, введите число от 1 до 7")
         continue
 
     match choice:
@@ -154,22 +143,19 @@ while True:
             transformation(json_path, csv_path)
 
         case "2":
-            json_to_csv(json_path, csv_path)
-
-        case "3":
             new_json(json_path)
 
-        case "4":
+        case "3":
             new_csv(csv_path)
 
-        case "5":
+        case "4":
             information(json_path)
 
-        case "6":
+        case "5":
             language_from_user(json_path)
 
-        case "7":
+        case "6":
             middle_height(json_path)
 
-        case "8":
+        case "7":
             break
