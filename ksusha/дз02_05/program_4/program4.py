@@ -20,7 +20,7 @@ with open(
     encoding="utf-8",
 ) as res:
     result_text = file_text
-    for word in stop_words:
+    for word in stop_words_ff:
         replacment = "*" * len(word)
         result_text = re.sub(word, replacment, result_text, flags=re.IGNORECASE)
     res.write(result_text)
