@@ -14,9 +14,9 @@ items = os.path.join(now_folder, "ksusha", "дз02_05", "program_1")
 files_items = os.listdir(items)
 
 for item in files_items:
-    expansion = "." + item.split(".")[-1]
-    expansions.append(expansion)
-
+    name, ext = os.path.splitext(item)
+    expansions.append(ext)
+    
 expansions_set = set(expansions)
 print(expansions_set)
 
