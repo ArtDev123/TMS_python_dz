@@ -16,7 +16,6 @@ files_items = os.listdir(items)
 for item in files_items:
     name, ext = os.path.splitext(item)
     expansions.append(ext)
-    
 expansions_set = set(expansions)
 print(expansions_set)
 
