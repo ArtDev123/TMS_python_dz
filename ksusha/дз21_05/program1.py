@@ -3,10 +3,9 @@ class Soda:
         self.name = name
 
     def get_taste(self) -> None:
-        taste = input(f"Введите вкус {self.name} или просто нажмите Enter,"
-        "если у газировки нет вкуса: ")
+        taste = input(f"Введите вкус {self.name} или просто нажмите Enter, \
+        если у газировки нет вкуса: ")
         self.taste = taste
-
 
     def print_soda_taste(self) -> None:
         if self.taste == "":
@@ -28,4 +27,3 @@ for soda in sodas:
 
 for soda in sodas:
     soda.print_soda_taste()
-    
