@@ -2,7 +2,8 @@ from math import pi
 
 
 class Sphere:
-    def __init__(self, radius: float = 1.0, x: float = 0.0, y: float = 0.0, z: float = 0.0) -> None:
+    def __init__(self, radius: float = 1.0, x: float = 0.0, y: float = 0.0,
+                z: float = 0.0) -> None:
         self.radius: float = radius
         self.x: float = x
         self.y: float = y
