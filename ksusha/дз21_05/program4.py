@@ -20,7 +20,7 @@ class Sphere:
     def get_radius(self) -> float:
         return self.radius
 
-    def get_center(self) -> tuple:
+    def get_center(self) -> tuple[float, float, float]:
         return (self.x, self.y, self.z)
 
     def set_radius(self, new_radius: float) -> None:
