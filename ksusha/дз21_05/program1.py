@@ -3,9 +3,10 @@ class Soda:
         self.name = name
 
     def get_taste(self) -> None:
-        taste = input(f"Введите вкус {self.name} или просто нажмите Enter," \
-        " если у газировки нет вкуса: ")
-        self.taste = taste    
+        taste = input(f"Введите вкус {self.name} или просто нажмите Enter,"
+        "если у газировки нет вкуса: ")
+        self.taste = taste
+
 
     def print_soda_taste(self) -> None:
         if self.taste == "":
@@ -13,7 +14,8 @@ class Soda:
         else:
             print(f"{self.name} имеет вкус: {self.taste}")
 
-sodas : list[Soda] = []
+
+sodas: list[Soda] = []
 count = int(input("Введите количество газировок, которые хотите добавить: "))
 
 
@@ -26,3 +28,4 @@ for soda in sodas:
 
 for soda in sodas:
     soda.print_soda_taste()
+    

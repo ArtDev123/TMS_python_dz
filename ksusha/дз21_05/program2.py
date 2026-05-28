@@ -1,7 +1,7 @@
 class Math:
     def addition(self, x: float, y: float) -> None:
         print(x+y)
-    
+
     def subtraction(self, x: float, y: float) -> None:
         print(x-y)
 
@@ -19,11 +19,11 @@ class Math:
 math_obj = Math()
 
 while (True):
-    print( "Меню\n1. Сложить два числа\n"\
-   "2. Вычесть одно число из другого\n"\
-    "3. Перемножить два числа\n" \
-    "4. Разделить одно число на другое\n" \
-    "5. Выход из программы")
+    print("Меню\n1. Сложить два числа\n"
+    "2.Вычесть одно число из другого\n"
+    "3.Перемножить два числа\n"
+    "4.Разделить одно число на другое\n"
+    "5.Выход из программы")
     choice = input("Введите номер того, что хотите сделать: ")
 
     if choice not in ["1", "2", "3", "4", "5"]:
@@ -37,7 +37,7 @@ while (True):
         case "1":
 
             math_obj.addition(x, y)
-        
+
         case "2":
             math_obj.subtraction(x, y)
 
@@ -50,4 +50,3 @@ while (True):
         case "5":
             break
     print("\n")
-        
