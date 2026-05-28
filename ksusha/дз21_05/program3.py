@@ -42,7 +42,7 @@ while (True):
     match choice:
         case "1":
 
-            object_car.__init__()
+            object_car = Car()
 
         case "2":
             object_car.get_color()
