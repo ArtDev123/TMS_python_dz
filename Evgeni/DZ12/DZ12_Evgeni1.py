@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from types import NotImplementedType
-from typing import Iterable, List, Optional, Sequence
+from typing import Iterator, List, Optional, Sequence
 
 
 class Tovar:
@@ -100,7 +100,7 @@ class Sklad:
     def __len__(self) -> int:
         return len(self.__items)
 
-    def __iter__(self) -> Iterable[Tovar]:
+    def __iter__(self) -> Iterator[Tovar]:
         return iter(self.__items)
 
     def __repr__(self) -> str:
@@ -132,7 +132,8 @@ if __name__ == "__main__":
     for item in sklad.sorted_by_price(reverse=True):
         print(" ", item.info())
 
-    total_price = sum(sklad)
+    # Правильный и типобезопасный способ посчитать общую стоимость:
+    total_price = sum(item.price for item in sklad)
     print(f"\nОбщая стоимость всех товаров: {total_price:.2f} ₽")
 
     print("Мёд + 100 =", a + 100)

@@ -112,14 +112,14 @@ class Bus:
             return False
         return passenger_name in self._passengers
 
-    def __iadd__(self, passenger_name: str) -> Bus:
+    def __iadd__(self, passenger_name: str) -> "Bus":
         """Операция += для посадки пассажира."""
         if not isinstance(passenger_name, str):
             raise TypeError("Можно добавлять только пассажира по фамилии (str)")
         self.board(passenger_name)
         return self
 
-    def __isub__(self, passenger_name: str) -> Bus:
+    def __isub__(self, passenger_name: str) -> "Bus":
         """Операция -= для высадки пассажира."""
         if not isinstance(passenger_name, str):
             raise TypeError("Можно удалять только пассажира по фамилии (str)")
