@@ -192,15 +192,17 @@ def main() -> None:
             },
         ]
         save_json(data, filename_json)
-    except ValueError as ve:
-        print(f"Ошибка структуры JSON: {ve}")
-        print("Исправьте employees.json и перезапустите программу.")
-        return
+
     except json.JSONDecodeError as je:
         print(f"Ошибка разбора JSON: {je}")
         print(
             "Файл повреждён или невалиден. Исправьте employees.json и перезапустите программу."
         )
+        return
+
+    except ValueError as ve:
+        print(f"Ошибка структуры JSON: {ve}")
+        print("Исправьте employees.json и перезапустите программу.")
         return
 
     while True:
