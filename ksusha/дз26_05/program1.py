@@ -10,7 +10,7 @@ class Product:
 
 
 class Warehouse():
-    def __init__(self, name):
+    def __init__(self, name:str) -> None:
         self.name = name
         self.products: list[Product] = []
 
@@ -29,17 +29,17 @@ class Warehouse():
                 print(f"Цена товара: {i.price}")
                 print(f"Магазин, в котором продаётся товар: {i.name_shop}")
 
-    def sort_price(self):
+    def sort_price(self) -> None:
         sorted_products = sorted(self.products, key=lambda p: p.price)
         for i in sorted_products:
             print(f"Название товара: {i.name_product}, цена: {i.price}")
 
-    def sort_name(self):
+    def sort_name(self) -> None:
         sorted_products = sorted(self.products, key=lambda p: p.name_product)
         for i in sorted_products:
             print(f"Название товара: {i.name_product}")
 
-    def sort_shop(self):
+    def sort_shop(self) -> None:
         sorted_products = sorted(self.products, key=lambda p: p.name_shop)
         for i in sorted_products:
             print(f"Название товара: {i.name_product}, магазин {i.name_shop}")

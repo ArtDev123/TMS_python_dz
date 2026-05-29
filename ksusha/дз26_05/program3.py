@@ -7,8 +7,8 @@ class Bus:
         self.max_speed = max_speed
         self.max_places = max_places
         self.place = 0
-        self.passangers = []
-        self.seats = {seat: None for seat in range(1, self.max_places + 1)}
+        self.passangers: list[str] = []
+        self.seats: dict[int, str] = {seat: "" for seat in range(1, self.max_places + 1)}
         self.free_seats = True
 
     def boarding_unboarding(self, count: int) -> None:
