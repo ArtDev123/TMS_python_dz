@@ -10,7 +10,7 @@ class Product:
 
 
 class Warehouse():
-    def __init__(self, name:str) -> None:
+    def __init__(self, name: str) -> None:
         self.name = name
         self.products: list[Product] = []
 
