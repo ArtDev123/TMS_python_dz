@@ -8,14 +8,15 @@ class Product:
     def __add__(self, other: 'Product') -> int:
         return self.price + other.price
 
+
 class Warehouse():
     def __init__(self, name):
         self.name = name
-        self.products: list[Product] = [] 
+        self.products: list[Product] = []
 
     def add_product(self, product: Product) -> None:
         self.products.append(product)
-    
+
     def i_information(self, i: int) -> None:
         print(f"Название товара: {self.products[i].name_product}")
         print(f"Цена товара: {self.products[i].price}")
@@ -31,17 +32,17 @@ class Warehouse():
     def sort_price(self):
         sorted_products = sorted(self.products, key=lambda p: p.price)
         for i in sorted_products:
-            print(f"Название товара: {i.name_product}, цена: {i.price}")        
+            print(f"Название товара: {i.name_product}, цена: {i.price}")
 
     def sort_name(self):
         sorted_products = sorted(self.products, key=lambda p: p.name_product)
         for i in sorted_products:
-            print(f"Название товара: {i.name_product}")        
-    
+            print(f"Название товара: {i.name_product}")
+
     def sort_shop(self):
         sorted_products = sorted(self.products, key=lambda p: p.name_shop)
         for i in sorted_products:
-            print(f"Название товара: {i.name_product}, магазин {i.name_shop}")        
+            print(f"Название товара: {i.name_product}, магазин {i.name_shop}")
 
 
 obj = Warehouse("ddd")

@@ -8,10 +8,10 @@ class Bus:
         self.max_places = max_places
         self.place = 0
         self.passangers = []
-        self.seats = {seat: None for seat in range(1, self.max_places +1)}
+        self.seats = {seat: None for seat in range(1, self.max_places + 1)}
         self.free_seats = True
 
-    def boarding_unboarding(self, count:int) -> None:
+    def boarding_unboarding(self, count: int) -> None:
         self.place += count
         if count >= 0:
             if self.place > self.max_places:
@@ -20,8 +20,10 @@ class Bus:
         else:
             if self.place < 0:
                 self.place = 0
-                print("Ошибка! Вы хотите высадить больше человек, чем находится в автобусе(вес пассажиры высажены) ")
-        print(f"Сейчас в вавтобусе: {self.place} мест занято, осталось свободно: {self.max_places - self.place}")
+                print("Ошибка! Вы хотите высадить больше человек,"
+                " чем находится в автобусе(вес пассажиры высажены) ")
+        print(f"Сейчас в вавтобусе: {self.place} мест занято, осталось свободно:"
+              "{self.max_places - self.place}")
         if self.place == self.max_places:
             self.free_seats = False
 
@@ -33,13 +35,13 @@ class Bus:
                 print("Вы пытаетесь добавить слишком много. Установлена максимальная скорость")
         else:
             if self.speed < 0:
-                    self.speed = 0
-                    print("Ошибка. Вы пытаетесь опустить скорость ниже нуля. Автобус остановлен.")
+                self.speed = 0
+                print("Ошибка. Вы пытаетесь опустить скорость ниже нуля. Автобус остановлен.")
         print(f"Сейчас скорость автобуса: {self.speed}")
 
     def __contains__(self, name: str) -> bool:
         return name in self.passangers
-    
+
     def __add__(self, name: str) -> 'Bus':
         if name not in self:
             self.passangers.append(name)
@@ -65,7 +67,7 @@ class Bus:
         else:
             print(f"{name} нет в автобусе")
             return self
-        
+
 
 ss = Bus(89, 90, 23)
 ss.boarding_unboarding(5)
@@ -82,4 +84,4 @@ ss -= "ffff"
 ss -= "dddc"
 ss -= "dddc"
 
-print (ss.passangers)
+print(ss.passangers)
