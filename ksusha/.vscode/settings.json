@@ -1,0 +1,15 @@
+{
+    // Указываем, что нужно использовать Black из выбранного окружения Python
+    "black-formatter.importStrategy": "fromEnvironment",
+
+    // Настройки, специфичные для Python-файлов
+    "[python]": {
+        // Явно назначаем Black форматтером по умолчанию
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        // Включаем автоматическое форматирование при сохранении файла
+        "editor.formatOnSave": true
+    },  // ← ВОТ ЭТА ЗАПЯТАЯ БЫЛА ПРОПУЩЕНА
+
+    "python.linting.enabled": false,
+    "python.linting.flake8Enabled": false
+}

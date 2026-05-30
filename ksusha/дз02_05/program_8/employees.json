@@ -1,0 +1,132 @@
+[
+    {
+        "name": "John Smith",
+        "birthday": "02.10.1990",
+        "height": 175,
+        "weight": 76.5,
+        "car": true,
+        "languages": [
+            "C++",
+            "Python"
+        ]
+    },
+    {
+        "name": "Alexey Alexeev",
+        "birthday": "05.06.1986",
+        "height": 197,
+        "weight": 101.2,
+        "car": false,
+        "languages": [
+            "Pascal",
+            "Delphi"
+        ]
+    },
+    {
+        "name": "Maria Ivanova",
+        "birthday": "28.08.1998",
+        "height": 165,
+        "weight": 56.1,
+        "car": true,
+        "languages": [
+            "C#",
+            "C++",
+            "C"
+        ]
+    },
+    {
+        "name": "Dmitry Petrov",
+        "birthday": "15.03.1995",
+        "height": 182,
+        "weight": 82.3,
+        "car": true,
+        "languages": [
+            "Java",
+            "Kotlin",
+            "SQL"
+        ]
+    },
+    {
+        "name": "Elena Sidorova",
+        "birthday": "22.07.1992",
+        "height": 168,
+        "weight": 58.5,
+        "car": false,
+        "languages": [
+            "JavaScript",
+            "TypeScript",
+            "React"
+        ]
+    },
+    {
+        "name": "Pavel Morozov",
+        "birthday": "10.12.1988",
+        "height": 190,
+        "weight": 95.0,
+        "car": true,
+        "languages": [
+            "Go",
+            "Docker",
+            "Kubernetes"
+        ]
+    },
+    {
+        "name": "Anna Kuznetsova",
+        "birthday": "03.05.2000",
+        "height": 162,
+        "weight": 52.0,
+        "car": false,
+        "languages": [
+            "Python",
+            "Django",
+            "PostgreSQL"
+        ]
+    },
+    {
+        "name": "Ivan Sokolov",
+        "birthday": "19.09.1993",
+        "height": 178,
+        "weight": 79.8,
+        "car": true,
+        "languages": [
+            "Ruby",
+            "Rails",
+            "JavaScript"
+        ]
+    },
+    {
+        "name": "Olga Novikova",
+        "birthday": "12.01.2000",
+        "height": 170,
+        "weight": 60.0,
+        "car": true,
+        "languages": [
+            "Java",
+            "Spring",
+            "Hibernate"
+        ]
+    },
+    {
+        "name": "Maxim Volkov",
+        "birthday": "25.04.2000",
+        "height": 185,
+        "weight": 88.5,
+        "car": false,
+        "languages": [
+            "Python",
+            "FastAPI",
+            "MongoDB"
+        ]
+    },
+    {
+        "name": "Natalia Lebedeva",
+        "birthday": "07.09.2000",
+        "height": 167,
+        "weight": 55.0,
+        "car": true,
+        "languages": [
+            "JavaScript",
+            "Vue.js",
+            "Node.js"
+        ]
+    }
+]
