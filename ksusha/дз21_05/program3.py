@@ -42,15 +42,15 @@ while (True):
 
         case "2":
             color = input("Введите цвет машины: ")
-            object_car.get_color()
+            object_car.get_color(color)
 
         case "3":
             type = input("Введите тип машины: ")
-            object_car.get_type()
+            object_car.get_type(type)
 
         case "4":
             year = input("Введите год машины: ")
-            object_car.get_year()
+            object_car.get_year(year)
 
         case "5":
             object_car.start_car()
