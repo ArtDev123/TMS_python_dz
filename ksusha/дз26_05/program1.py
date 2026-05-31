@@ -28,7 +28,7 @@ class Warehouse():
     def name_information(self, name: str) -> None:
         for product in range(len(self.products)):
             if self.products[product].name_product == name:
-                self.print_inf(product)                
+                self.print_inf(product)
 
     def sort_price(self) -> None:
         sorted_products = sorted(self.products, key=lambda p: p.price)
