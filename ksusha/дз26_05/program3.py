@@ -27,7 +27,7 @@ class Bus:
         if self.place == self.max_places:
             self.free_seats = False
 
-    def more_less_speed(self, speed: float) -> None:
+    def change_speed(self, speed: float) -> None:
         self.speed += speed
         if speed > 0:
             if self.speed > self.max_speed:
@@ -72,7 +72,7 @@ class Bus:
 ss = Bus(89, 90, 23)
 ss.boarding_unboarding(5)
 ss.boarding_unboarding(-9)
-ss.more_less_speed(-90)
+ss.change_speed(-90)
 
 ss += "Рита"
 ss += "LLlll"

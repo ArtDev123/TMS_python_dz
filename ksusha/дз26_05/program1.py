@@ -17,32 +17,33 @@ class Warehouse():
     def add_product(self, product: Product) -> None:
         self.products.append(product)
 
-    def i_information(self, i: int) -> None:
+    def print_inf(self, i: int) -> None:
         print(f"Название товара: {self.products[i].name_product}")
         print(f"Цена товара: {self.products[i].price}")
         print(f"Магазин, в котором продаётся товар: {self.products[i].name_shop}")
 
+    def information_about_the_index(self, i: int) -> None:
+        self.print_inf(i)
+
     def name_information(self, name: str) -> None:
-        for i in self.products:
-            if i.name_product == name:
-                print(f"Название товара: {i.name_product}")
-                print(f"Цена товара: {i.price}")
-                print(f"Магазин, в котором продаётся товар: {i.name_shop}")
+        for product in range(len(self.products)):
+            if self.products[product].name_product == name:
+                self.print_inf(product)                
 
     def sort_price(self) -> None:
         sorted_products = sorted(self.products, key=lambda p: p.price)
-        for i in sorted_products:
-            print(f"Название товара: {i.name_product}, цена: {i.price}")
+        for product in sorted_products:
+            print(f"Название товара: {product.name_product}, цена: {product.price}")
 
     def sort_name(self) -> None:
         sorted_products = sorted(self.products, key=lambda p: p.name_product)
-        for i in sorted_products:
-            print(f"Название товара: {i.name_product}")
+        for product in sorted_products:
+            print(f"Название товара: {product.name_product}")
 
     def sort_shop(self) -> None:
         sorted_products = sorted(self.products, key=lambda p: p.name_shop)
-        for i in sorted_products:
-            print(f"Название товара: {i.name_product}, магазин {i.name_shop}")
+        for product in sorted_products:
+            print(f"Название товара: {product.name_product}, магазин {product.name_shop}")
 
 
 obj = Warehouse("ddd")
