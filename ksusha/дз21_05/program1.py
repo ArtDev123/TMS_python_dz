@@ -3,7 +3,7 @@ class Soda:
         self.name = name
         self.taste = taste
 
-    def __str__(self):
+    def __str__(self) -> str:
         if self.taste:
             return f"{self.name} имеет вкус: {self.taste}"
         return f"{self.name} имеет обычный вкусом"
@@ -17,5 +17,5 @@ for i in range(count):
     taste = input("Введите вкус газировки или нажмите пробел:")
     sodas.append(Soda(name, taste))
 
-for i in sodas:
-    print(i)
+for soda in sodas:
+    print(soda)

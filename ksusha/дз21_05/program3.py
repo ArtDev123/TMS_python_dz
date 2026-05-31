@@ -19,8 +19,6 @@ class Car:
         self.year = year
 
 
-object_car = Car()
-
 while (True):
     print("Меню\n1. Присвоить автомобилю имя\n"
           "2. Присвоить автомобилю цвет\n"
@@ -49,7 +47,7 @@ while (True):
             object_car.get_type(type)
 
         case "4":
-            year = input("Введите год машины: ")
+            year = int(input("Введите год машины: "))
             object_car.get_year(year)
 
         case "5":
