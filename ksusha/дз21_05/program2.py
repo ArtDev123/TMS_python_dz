@@ -35,7 +35,6 @@ while (True):
     print("Результат работы программы: ", end="")
     match choice:
         case "1":
-
             math_obj.addition(x, y)
 
         case "2":

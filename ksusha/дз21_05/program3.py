@@ -1,7 +1,6 @@
 class Car:
 
-    def __init__(self) -> None:
-        name = input("Введите модель машины: ")
+    def __init__(self, name: str) -> None:
         self.name = name
 
     def start_car(self) -> None:
@@ -10,16 +9,13 @@ class Car:
     def stop_car(self) -> None:
         print(f"Автомобиль {self.name} заглушен")
 
-    def get_color(self) -> None:
-        color = input("Введите цыет машины: ")
+    def get_color(self, color: str) -> None:
         self.color = color
 
-    def get_type(self) -> None:
-        type = input("Введите тип машины: ")
+    def get_type(self, type: str) -> None:
         self.type = type
 
-    def get_year(self) -> None:
-        year = input("Введите год машины: ")
+    def get_year(self, year: int) -> None:
         self.year = year
 
 
@@ -41,16 +37,19 @@ while (True):
 
     match choice:
         case "1":
-
-            object_car = Car()
+            name = input("Введите модель машины: ")
+            object_car = Car(name)
 
         case "2":
+            color = input("Введите цвет машины: ")
             object_car.get_color()
 
         case "3":
+            type = input("Введите тип машины: ")
             object_car.get_type()
 
         case "4":
+            year = input("Введите год машины: ")
             object_car.get_year()
 
         case "5":
