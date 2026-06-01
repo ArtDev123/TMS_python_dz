@@ -7,11 +7,11 @@ def generation(number: int):
     curent2 = 1
     number -= 2
     while number > 0:
-        curent  = curent1 + curent2
+        curent = curent1 + curent2
         curent1 = curent2
         curent2 = curent
         yield curent
-        number -=1
+        number -= 1
 
 
 count = int(input("Введите количество чисел для вывода: "))

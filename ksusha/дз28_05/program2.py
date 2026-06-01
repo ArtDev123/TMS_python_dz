@@ -5,7 +5,7 @@ def sequence(count: int):
         i += 1
         i %= 4
         if i == 0:
-            i =+ 1
+            i += 1
         yield i
 
 

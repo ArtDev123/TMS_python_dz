@@ -3,20 +3,24 @@ class Operation:
         self.x = x
         self.y = y
 
+
 class Addition(Operation):
 
     def execute(self) -> float:
         return self.x + self.y
+
 
 class Subtraction(Operation):
 
     def execute(self) -> float:
         return self.x - self.y
 
+
 class Multiplication(Operation):
 
     def execute(self) -> float:
         return self.x * self.y
+
 
 class Division(Operation):
 
@@ -24,6 +28,7 @@ class Division(Operation):
         if self.y == 0:
             raise ZeroDivisionError("Ошибка! Деление на ноль")
         return self.x / self.y
+
 
 class Calculator:
     def __init__(self) -> None:
@@ -36,7 +41,8 @@ class Calculator:
         if self.strategy:
             return self.strategy.execute()
         raise ValueError("Стратегия не выбрана")
-        
+
+
 Calcula = Calculator()
 Calcula.set_strategy(Division(2, 3))
 print(Calcula.calculate())
