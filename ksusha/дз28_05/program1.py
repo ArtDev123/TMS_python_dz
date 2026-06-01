@@ -1,4 +1,6 @@
-def generation(number: int):
+from typing import Any
+
+def generation(number: int) -> Any:
     if number >= 1:
         yield 0
     if number >= 2:

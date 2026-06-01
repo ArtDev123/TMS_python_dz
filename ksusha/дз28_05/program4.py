@@ -1,6 +1,6 @@
 class Animal:
-    def speak(self) -> None:
-        pass
+    def speak(self) -> str:
+        return ""
 
 
 class Dog(Animal):

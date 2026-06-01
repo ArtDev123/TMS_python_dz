@@ -2,7 +2,7 @@ from typing import Self
 
 
 class Pizza:
-    def __init__(self, size: str = None, cheese: bool = False, pepperoni: bool = False,
+    def __init__(self, size: str | None = None, cheese: bool = False, pepperoni: bool = False,
                  mushrooms: bool = False, onions: bool = False, bacon: bool = False) -> None:
         self.size = size
         self.cheese = cheese
@@ -30,7 +30,7 @@ class Pizza:
 
 
 class PizzaBuilder:
-    def __init__(self):
+    def __init__(self) -> None:
         self.pizza = Pizza()
 
     def add_size(self, size: str) -> Self:

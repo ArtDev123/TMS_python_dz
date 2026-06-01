@@ -34,7 +34,7 @@ class Calculator:
     def __init__(self) -> None:
         self.strategy = None
 
-    def set_strategy(self, strategy: 'Operation') -> None:
+    def set_strategy(self, strategy: None | 'Operation') -> None:
         self.strategy = strategy
 
     def calculate(self) -> float:

@@ -1,4 +1,6 @@
-def sequence(count: int):
+from typing import Any
+
+def sequence(count: int) -> Any:
     i = -1
     while count > 0:
         count -= 1
