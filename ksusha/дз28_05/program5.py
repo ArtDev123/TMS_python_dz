@@ -4,7 +4,7 @@ class Operation:
         self.y = y
 
     def execute(self) -> float:
-        pass
+        return 0.0
 
 
 class Addition(Operation):
