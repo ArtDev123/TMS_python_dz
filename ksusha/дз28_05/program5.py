@@ -3,6 +3,8 @@ class Operation:
         self.x = x
         self.y = y
 
+    def execute(self) -> float:
+        pass
 
 class Addition(Operation):
 
