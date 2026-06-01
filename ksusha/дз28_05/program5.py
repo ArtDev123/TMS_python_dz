@@ -6,6 +6,7 @@ class Operation:
     def execute(self) -> float:
         pass
 
+
 class Addition(Operation):
 
     def execute(self) -> float:
