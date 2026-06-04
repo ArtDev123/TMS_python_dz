@@ -1,4 +1,4 @@
-from typing import List, Dict, Optional, Union
+from typing import Optional, Union
 
 
 class Bus:
@@ -21,8 +21,8 @@ class Bus:
         self._max_speed: float = max_speed
         self._speed: float = speed
 
-        self._passengers: List[str] = []
-        self._seats: Dict[int, Optional[str]] = {
+        self._passengers: list[str] = []
+        self._seats: dict[int, Optional[str]] = {
             i: None for i in range(1, max_seats + 1)
         }
 
@@ -39,7 +39,7 @@ class Bus:
         return self._max_speed
 
     @property
-    def passengers(self) -> List[str]:
+    def passengers(self) -> list[str]:
         """Список фамилий пассажиров"""
         return self._passengers.copy()
 
@@ -49,11 +49,11 @@ class Bus:
         return len(self._passengers) < self._max_seats
 
     @property
-    def seats(self) -> Dict[int, Optional[str]]:
+    def seats(self) -> dict[int, Optional[str]]:
         """Словарь мест, ключ — номер места, значение — фамилия пассажира или None"""
         return self._seats.copy()
 
-    def board(self, passenger_names: Union[str, List[str]]) -> None:
+    def board(self, passenger_names: Union[str, list[str]]) -> None:
         """
         Посадить одного или нескольких пассажиров.
         passenger_names — либо строка (фамилия одного пассажира),
@@ -75,7 +75,7 @@ class Bus:
             self._seats[free_seat] = name
             self._passengers.append(name)
 
-    def disembark(self, passenger_names: Union[str, List[str]]) -> None:
+    def disembark(self, passenger_names: Union[str, list[str]]) -> None:
         """
         Высадить одного или нескольких пассажиров.
         passenger_names — либо строка (фамилия одного пассажира),
