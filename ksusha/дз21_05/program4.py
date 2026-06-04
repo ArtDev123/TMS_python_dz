@@ -2,7 +2,7 @@ from math import pi
 
 
 class Sphere:
-    def __init__(self, radius = 1, x = 0, y = 0, z = 0) -> None:
+    def __init__(self, radius=1, x=0, y=0, z=0) -> None:
         self.radius = radius
         self.x = x
         self.y = y
@@ -11,26 +11,24 @@ class Sphere:
     def get_volume(self) -> float:
         v = (4*pi*(self.radius**3))/3
         return v
-    
+
     def get_square(self) -> float:
         s = 4*pi*(self.radius**2)
         return s
-    
+
     def get_radius(self) -> float:
         return self.radius
-    
+
     def get_center(self) -> float:
         return (self.x, self.y, self.z)
-    
+
     def set_radius(self, new_radius: float) -> None:
         self.radius = new_radius
 
-    def set_center(self, x_new:float, y_new:float, z_new:float) -> None:
+    def set_center(self, x_new: float, y_new: float, z_new: float) -> None:
         self.x = x_new
         self.y = y_new
         self.z = z_new
 
-    def is_point_inside(self, x_point:float, y_point:float, z_point:float) -> bool:
+    def is_point_inside(self, x_point: float, y_point: float, z_point: float) -> bool:
         return (self.x-x_point)**2 + (self.y-y_point)**2 + (self.z-z_point)**2 < self.radius**2
-
-    
