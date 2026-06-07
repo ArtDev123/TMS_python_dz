@@ -1,4 +1,5 @@
 from homeWorks_OOP_2.task_02_bee_elephant.bee_elephant import BeeElephant
+from homeWorks_OOP_2.task_02_bee_elephant.meal import Meal
 
 
 # ===== Создание объекта =====
@@ -22,7 +23,7 @@ print()
 # ===== Проверка eat('nectar') =====
 print("Проверка eat('nectar', 20):")
 
-bee_elephant.eat("nectar", 20)
+bee_elephant.eat(Meal.NECTAR, 20)
 
 print(f"Bee: {bee_elephant.bee_part}")
 print(f"Elephant: {bee_elephant.elephant_part}")
@@ -31,7 +32,7 @@ print()
 # ===== Проверка eat('grass') =====
 print("Проверка eat('grass', 10):")
 
-bee_elephant.eat("grass", 10)
+bee_elephant.eat(Meal.GRASS, 10)
 
 print(f"Bee: {bee_elephant.bee_part}")
 print(f"Elephant: {bee_elephant.elephant_part}")
@@ -40,7 +41,7 @@ print()
 # ===== Проверка ограничения до 100 =====
 print("Проверка верхней границы:")
 
-bee_elephant.eat("nectar", 100)
+bee_elephant.eat(Meal.NECTAR, 100)
 
 print(f"Bee: {bee_elephant.bee_part}")
 print(f"Elephant: {bee_elephant.elephant_part}")
@@ -49,7 +50,7 @@ print()
 # ===== Проверка ограничения до 0 =====
 print("Проверка нижней границы:")
 
-bee_elephant.eat("grass", 100)
+bee_elephant.eat(Meal.GRASS, 100)
 
 print(f"Bee: {bee_elephant.bee_part}")
 print(f"Elephant: {bee_elephant.elephant_part}")
@@ -59,6 +60,6 @@ print()
 print("Проверка неправильной еды:")
 
 try:
-    bee_elephant.eat("pizza", 10)
+    bee_elephant.eat(Meal("pizza"), 10)
 except ValueError as error:
-    print(error)
+    print(f"Ошибка: {error}")
