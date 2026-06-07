@@ -9,11 +9,13 @@ product4 = Product("Banana", "Biedronka", 4.47)
 product5 = Product("Sushi", "Lidl", 15.29)
 
 warehouse = Warehouse(
-    products=[product1,
-              product2,
-              product3,
-              product4,
-              product5]
+    products=[
+        product1,
+        product2,
+        product3,
+        product4,
+        product5,
+    ]
 )
 
 search_index = warehouse.get_by_index(0)

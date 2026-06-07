@@ -2,7 +2,8 @@ class Product:
     def __init__(
             self, name: str,
             shop_name: str,
-            price_zloty: float) -> None:
+            price_zloty: float,
+    ) -> None:
 
         self._name = name
         self._shop_name = shop_name

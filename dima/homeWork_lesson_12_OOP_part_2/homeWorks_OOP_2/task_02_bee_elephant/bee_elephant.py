@@ -1,4 +1,10 @@
 from dataclasses import dataclass
+from enum import Enum
+
+
+class Eat(Enum):
+    nectar = 'nectar'
+    grass = 'grass'
 
 
 @dataclass
@@ -27,10 +33,10 @@ class BeeElephant:
         if value < 0:
             raise ValueError("Количество еды не может быть отрицательным")
 
-        if meal == 'nectar':
+        if meal == Eat.nectar:
             self._elephant_part -= value
             self._bee_part += value
-        elif meal == 'grass':
+        elif meal == Eat.grass:
             self._bee_part -= value
             self._elephant_part += value
         else:
