@@ -1,4 +1,4 @@
-from dima.homeWork_lesson_13_iterators_generators_patterns.homeWorks.patterns.factory.animal import Animal
+from patterns.factory.animal import Animal
 
 
 class Cat(Animal):
